@@ -34,7 +34,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('apodoReg')? 'text-danger fw-bold text-decoration-line-through':'' }} " href="{{ route('apodoReg') }}">Registrar Recuerdo</a>
+                <a class="nav-link {{ request()->routeIs('recuerdo.create')? 'text-danger fw-bold text-decoration-line-through':'' }} " href="{{ route('recuerdo.create') }}">Registrar Recuerdo</a>
               </li>
 
               <li class="nav-item">

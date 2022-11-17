@@ -3,6 +3,21 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\controladorBD;
+
+
+
+//Rutas para controlador Resource
+
+//Create
+Route::get('recuerdo/create', [controladorBD::class,'create'])->name('recuerdo.create');
+
+
+
+
+
+
+
 
 
 
@@ -12,7 +27,7 @@ Route::get('/', [controladorVistas::class,'showWelcome']);
 
 Route::get('Home', [controladorVistas::class,'showHome'])->name('apodoHome');
 
-Route::get('Registar', [controladorVistas::class,'showIngresar'])->name('apodoReg');
+
 
 Route::get('Recuerdo', [controladorVistas::class,'showRecuerdos'])->name('apodoRec');
 
