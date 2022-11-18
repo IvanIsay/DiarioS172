@@ -12,9 +12,11 @@ use App\Http\Controllers\controladorBD;
 //Create
 Route::get('recuerdo/create', [controladorBD::class,'create'])->name('recuerdo.create');
 
+//Store
+Route::post('recuerdo', [controladorBD::class,'store'])->name('recuerdo.store');
 
-
-
+//Index
+Route::get('recuerdo', [controladorBD::class,'index'])->name('recuerdo.index');
 
 
 
@@ -34,7 +36,7 @@ Route::get('Recuerdo', [controladorVistas::class,'showRecuerdos'])->name('apodoR
 
 // Ruta para envio post
 
-Route::post('GuardarRecuerdo', [controladorVistas::class,'procesarRecuerdo'])->name('SaveMem');
+
 
 
 

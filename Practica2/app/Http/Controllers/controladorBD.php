@@ -12,7 +12,8 @@ class controladorBD extends Controller
 
     public function index()
     {
-        //
+        $ConsultaRec= DB::table('tb_recuerdos')->get();
+        return view('Recuerdo',compact('ConsultaRec'));
     }
 
 
@@ -24,7 +25,15 @@ class controladorBD extends Controller
 
     public function store(validadorDiario $request)
     {
-        DB::table('tb_recuerdos')->insert([]);
+        DB::table('tb_recuerdos')->insert([
+            "titulo"=> $request->input('txtTitulo'),
+            "recuerdo"=> $request->input('txtRecuerdo'),
+            "fecha"=> Carbon::now(),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now()
+        ]);
+
+        return redirect('recuerdo/create')->with('confirmacion','abc');
     }
 
 

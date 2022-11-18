@@ -38,7 +38,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('apodoRec')? 'text-success fw-bold':'' }}" href="Recuerdo"> Consultar Recuerdos </a>
+                <a class="nav-link {{ request()->routeIs('recuerdo.index')? 'text-success fw-bold':'' }}" href="{{ route('recuerdo.index') }}"> Consultar Recuerdos </a>
               </li>
               
             </ul>

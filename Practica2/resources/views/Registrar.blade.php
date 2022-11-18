@@ -8,7 +8,7 @@
 
     {!!"<script>  Swal.fire(
       'Correcto!',
-      'Tu recuerdo llego al controlador!',
+      'Tu recuerdo se guardo!',
       'success'
     )  </script>"!!}
       
@@ -40,7 +40,7 @@
 
           <div class="card-body">
 
-               <form class="m-4" method="post" action="GuardarRecuerdo">
+               <form class="m-4" method="post" action="{{route('recuerdo.store')}}">
                     @csrf
                     
                     <div class="mb-3">
