@@ -4,6 +4,17 @@
 
 @section('contenido')
 
+
+@if (session()->has('Actualizar'))
+
+{!!"<script>  Swal.fire(
+  'Correcto!',
+  'Tu recuerdo se actualizo!',
+  'success'
+)  </script>"!!}
+  
+@endif
+
    
      <h1 class="display-1 mt-4 mb-4 text-center"> Consulta Recuerdos </h1>
 
@@ -25,8 +36,8 @@
                </div>
 
                <div class="card-footer ">
-                    <a href="#" class="btn btn-danger">A  </a>
-                    <a href="#" class="btn btn-warning">E </a>
+                    <a href="{{route('recuerdo.edit',$consulta->idRecuerdo)}}" class="btn btn-warning">Actualizar  </a>
+                    <a href="#" class="btn btn-danger">E </a>
                </div>
 
              </div>

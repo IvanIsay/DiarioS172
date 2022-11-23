@@ -18,6 +18,13 @@ Route::post('recuerdo', [controladorBD::class,'store'])->name('recuerdo.store');
 //Index
 Route::get('recuerdo', [controladorBD::class,'index'])->name('recuerdo.index');
 
+//Edit
+Route::get('recuerdo/{id}/edit', [controladorBD::class,'edit'])->name('recuerdo.edit');
+
+//Update
+Route::put('recuerdo/{id}', [controladorBD::class,'update'])->name('recuerdo.update');
+
+
 
 
 
