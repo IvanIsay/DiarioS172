@@ -24,7 +24,8 @@ Route::get('recuerdo/{id}/edit', [controladorBD::class,'edit'])->name('recuerdo.
 //Update
 Route::put('recuerdo/{id}', [controladorBD::class,'update'])->name('recuerdo.update');
 
-
+//Show
+Route::get('recuerdo/{id}/show', [controladorBD::class,'show'])->name('recuerdo.show');
 
 
 

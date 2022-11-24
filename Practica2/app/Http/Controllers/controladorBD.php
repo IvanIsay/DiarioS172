@@ -37,14 +37,6 @@ class controladorBD extends Controller
     }
 
 
-    public function show($id)
-    {
-        //
-    }
-
- 
-
-
     public function edit($id)
     {
         $consultaId= DB::table('tb_recuerdos')->where('idRecuerdo',$id)->first();
@@ -62,6 +54,13 @@ class controladorBD extends Controller
         ]);
 
         return redirect('recuerdo')->with('Actualizar','abc');
+    }
+
+
+
+    public function show($id)
+    {
+        return view('eliminar');
     }
 
 
