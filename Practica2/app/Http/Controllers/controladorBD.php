@@ -53,22 +53,23 @@ class controladorBD extends Controller
             "updated_at"=> Carbon::now()
         ]);
 
-        return redirect('recuerdo')->with('Actualizar','abc');
+        return redirect('recuerdo')->with('Actualizado','abc');
     }
 
 
 
     public function show($id)
     {
-        return view('eliminar');
+        $consultaId= DB::table('tb_recuerdos')->where('idRecuerdo',$id)->first();
+
+        return view('eliminar',compact('consultaId'));
     }
-
-
-
 
 
     public function destroy($id)
     {
-        //
+        DB::table('tb_recuerdos')->where('idRecuerdo',$id)->delete();
+
+        return redirect('recuerdo')->with('Eliminado','abc');
     }
 }

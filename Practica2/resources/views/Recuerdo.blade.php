@@ -5,11 +5,21 @@
 @section('contenido')
 
 
-@if (session()->has('Actualizar'))
+@if (session()->has('Actualizado'))
 
 {!!"<script>  Swal.fire(
   'Correcto!',
   'Tu recuerdo se actualizo!',
+  'success'
+)  </script>"!!}
+  
+@endif
+
+@if (session()->has('Eliminado'))
+
+{!!"<script>  Swal.fire(
+  'Correcto!',
+  'Tu recuerdo se Elimino!',
   'success'
 )  </script>"!!}
   
@@ -37,7 +47,7 @@
 
                <div class="card-footer ">
                     <a href="{{route('recuerdo.edit',$consulta->idRecuerdo)}}" class="btn btn-warning">Actualizar  </a>
-                    <a href="#" class="btn btn-danger">E </a>
+                    <a href="{{route('recuerdo.show',$consulta->idRecuerdo)}}" class="btn btn-danger">Eliminar </a>
                </div>
 
              </div>
